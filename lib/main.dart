@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:football_predictor_flutter/base/base_controller.dart';
 import 'package:football_predictor_flutter/resources/translations.dart';
 import 'package:get/get.dart';
 import 'flavors.dart';
