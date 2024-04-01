@@ -1,0 +1,75 @@
+name: football_predictor_flutter
+description: "A Flutter project for predicting football matches."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  get: ^4.6.6
+  logger: ^2.0.2
+  package_info_plus: ^6.0.0
+  geocoding: ^3.0.0
+  url_launcher: ^6.1.11
+  flutter_custom_tabs: ^2.0.0+1
+  flutter_secure_storage: ^9.0.0
+  cached_network_image: ^3.2.3
+  shimmer: ^3.0.0
+  flutter_web_auth_2: ^3.1.1
+  local_auth: ^2.1.6
+  shared_preferences: ^2.2.2
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_flavorizr: ^2.2.1
+
+flutter:
+  uses-material-design: true
+
+# The following section is specific to build flavors.
+flavorizr:
+  ide: "idea"
+  flavors:
+    prod:
+      app:
+        name: "FP_PROD"
+      android:
+        applicationId: "com.football.predictor.prod"
+        firebase:
+          config: "firebase/prod/google-services.json"
+      ios:
+        bundleId: "com.football.predictor.prod"
+        firebase:
+          config: "firebase/prod/GoogleService-Info.plist"
+    qa:
+      app:
+        name: "FP_QA"
+      android:
+        applicationId: "com.football.predictor.qa"
+        firebase:
+          config: "firebase/qa/google-services.json"
+      ios:
+        bundleId: "com.football.predictor.qa"
+        firebase:
+          config: "firebase/qa/GoogleService-Info.plist"
+    dev:
+      app:
+        name: "FP_DEV"
+      android:
+        applicationId: "com.football.predictor.dev"
+        firebase:
+          config: "firebase/dev/google-services.json"
+      ios:
+        bundleId: "com.football.predictor.dev"
+        firebase:
+          config: "firebase/dev/GoogleService-Info.plist"
+

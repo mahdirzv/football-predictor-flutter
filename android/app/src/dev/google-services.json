@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "848006646497",
+    "project_id": "football-predictor-dev-ab3b4",
+    "storage_bucket": "football-predictor-dev-ab3b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848006646497:android:95f229c3eca5a1bebcc5a0",
+        "android_client_info": {
+          "package_name": "com.football.predictor.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBppUO4a0Sekxp5Orm2ypBB3nPiLAv68iw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
