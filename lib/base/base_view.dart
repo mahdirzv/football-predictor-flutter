@@ -11,8 +11,9 @@ abstract class BaseView<T extends BaseController> extends GetView<T>
   const BaseView({super.key});
 
   getAppBar(
-      {required Function(String link) crossSellOnTap}) {
-    return ApplicationBar(crossSellOnTap: crossSellOnTap);
+      {String? title}) {
+    return ApplicationBar(
+        title: title, crossSellOnTap: (String link) {  },);
   }
 
   drawError(String? error) {

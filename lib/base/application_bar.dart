@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ApplicationBar extends StatelessWidget implements PreferredSizeWidget {
-  const ApplicationBar({super.key, required this.crossSellOnTap});
+  const ApplicationBar({super.key, required this.crossSellOnTap, String? title});
 
   final Function(String link) crossSellOnTap;
 
@@ -42,5 +42,5 @@ class ApplicationBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size(MediaQuery.of(Get.context!).size.width, _kLargeHeight);
+  Size get preferredSize => Size.fromHeight(_kSmallHeight);
 }
