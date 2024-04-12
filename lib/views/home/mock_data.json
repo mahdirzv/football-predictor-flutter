@@ -1,0 +1,194 @@
+{
+  "name": "Premier League",
+  "schedule": [
+    {
+      "date": "2023-08-13",
+      "matches": [
+        {
+          "homeTeam": "Manchester United",
+          "awayTeam": "Leeds United",
+          "homeTeamStrengthIndicator": 85,
+          "awayTeamStrengthIndicator": 70,
+          "predictedResult": "3-1",
+          "actualWin": 1
+        },
+        {
+          "homeTeam": "Leicester City",
+          "awayTeam": "Wolverhampton Wanderers",
+          "homeTeamStrengthIndicator": 75,
+          "awayTeamStrengthIndicator": 65,
+          "predictedResult": "2-0",
+          "actualWin": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-08-14",
+      "matches": [
+        {
+          "homeTeam": "Newcastle United",
+          "awayTeam": "West Ham United",
+          "homeTeamStrengthIndicator": 65,
+          "awayTeamStrengthIndicator": 75,
+          "predictedResult": "1-2",
+          "actualWin": 2
+        },
+        {
+          "homeTeam": "Tottenham Hotspur",
+          "awayTeam": "Manchester City",
+          "homeTeamStrengthIndicator": 80,
+          "awayTeamStrengthIndicator": 90,
+          "predictedResult": "1-3",
+          "actualWin": 2
+        }
+      ]
+    },
+    {
+      "date": "2023-08-15",
+      "matches": [
+        {
+          "homeTeam": "Liverpool",
+          "awayTeam": "Norwich City",
+          "homeTeamStrengthIndicator": 90,
+          "awayTeamStrengthIndicator": 60,
+          "predictedResult": "4-0",
+          "actualWin": 1
+        },
+        {
+          "homeTeam": "Chelsea",
+          "awayTeam": "Crystal Palace",
+          "homeTeamStrengthIndicator": 85,
+          "awayTeamStrengthIndicator": 65,
+          "predictedResult": "3-0",
+          "actualWin": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-08-16",
+      "matches": [
+        {
+          "homeTeam": "Everton",
+          "awayTeam": "Southampton",
+          "homeTeamStrengthIndicator": 70,
+          "awayTeamStrengthIndicator": 65,
+          "predictedResult": "2-1",
+          "actualWin": 1
+        },
+        {
+          "homeTeam": "Aston Villa",
+          "awayTeam": "Watford",
+          "homeTeamStrengthIndicator": 70,
+          "awayTeamStrengthIndicator": 65,
+          "predictedResult": "2-1",
+          "actualWin": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-08-17",
+      "matches": [
+        {
+          "homeTeam": "Burnley",
+          "awayTeam": "Brighton & Hove Albion",
+          "homeTeamStrengthIndicator": 65,
+          "awayTeamStrengthIndicator": 70,
+          "predictedResult": "1-2",
+          "actualWin": 2
+        },
+        {
+          "homeTeam": "Arsenal",
+          "awayTeam": "Brentford",
+          "homeTeamStrengthIndicator": 80,
+          "awayTeamStrengthIndicator": 60,
+          "predictedResult": "3-0",
+          "actualWin": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-08-18",
+      "matches": [
+        {
+          "homeTeam": "Leeds United",
+          "awayTeam": "Everton",
+          "homeTeamStrengthIndicator": 70,
+          "awayTeamStrengthIndicator": 70,
+          "predictedResult": "2-2",
+          "actualWin": 0
+        },
+        {
+          "homeTeam": "Manchester City",
+          "awayTeam": "Norwich City",
+          "homeTeamStrengthIndicator": 90,
+          "awayTeamStrengthIndicator": 60,
+          "predictedResult": "4-0",
+          "actualWin": 1
+        }
+      ]
+    },
+    {
+      "date": "2023-08-19",
+      "matches": [
+        {
+          "homeTeam": "Brighton & Hove Albion",
+          "awayTeam": "Watford",
+          "homeTeamStrengthIndicator": 70,
+          "awayTeamStrengthIndicator": 65,
+          "predictedResult": "2-1",
+          "actualWin": 1
+        },
+        {
+          "homeTeam": "Southampton",
+          "awayTeam": "Manchester United",
+          "homeTeamStrengthIndicator": 65,
+          "awayTeamStrengthIndicator": 85,
+          "predictedResult": "1-3",
+          "actualWin": 2
+        }
+      ]
+    },
+    {
+      "date": "2023-08-20",
+      "matches": [
+        {
+          "homeTeam": "Wolverhampton Wanderers",
+          "awayTeam": "Tottenham Hotspur",
+          "homeTeamStrengthIndicator": 65,
+          "awayTeamStrengthIndicator": 80,
+          "predictedResult": "1-2",
+          "actualWin": 2
+        },
+        {
+          "homeTeam": "Arsenal",
+          "awayTeam": "Chelsea",
+          "homeTeamStrengthIndicator": 80,
+          "awayTeamStrengthIndicator": 85,
+          "predictedResult": "2-2",
+          "actualWin": 0
+        }
+      ]
+    },
+    {
+      "date": "2023-08-21",
+      "matches": [
+        {
+          "homeTeam": "West Ham United",
+          "awayTeam": "Leicester City",
+          "homeTeamStrengthIndicator": 75,
+          "awayTeamStrengthIndicator": 75,
+          "predictedResult": "2-2",
+          "actualWin": 0
+        },
+        {
+          "homeTeam": "Liverpool",
+          "awayTeam": "Burnley",
+          "homeTeamStrengthIndicator": 90,
+          "awayTeamStrengthIndicator": 65,
+          "predictedResult": "3-0",
+          "actualWin": 1
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BaseContainer extends StatelessWidget {
   const BaseContainer({
@@ -18,6 +19,7 @@ class BaseContainer extends StatelessWidget {
     this.backgroundColor = CupertinoColors.white,
     this.bgOpacity = 0.2,
     this.padding = const EdgeInsets.all(0),
+    this.width
   });
 
   final Widget child;
@@ -31,13 +33,14 @@ class BaseContainer extends StatelessWidget {
   final double filterSigmaY;
   final Color backgroundColor;
   final double bgOpacity;
+  final double? width;
   final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: padding,
-      width: double.infinity,
+      width: width ?? double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
         border: Border.all(color: borderColor.withAlpha(50)),

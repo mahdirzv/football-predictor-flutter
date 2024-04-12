@@ -1,6 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:football_predictor_flutter/base/base_container.dart';
 import 'package:football_predictor_flutter/base/date_picker.dart';
 import 'package:football_predictor_flutter/resources/app_colours.dart';
@@ -23,8 +23,8 @@ class HomeView extends BaseView<HomeController> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.white7,
-            AppColors.white1,
+            AppColors.white5,
+            AppColors.white5,
           ],
         ),
       ),
@@ -36,13 +36,59 @@ class HomeView extends BaseView<HomeController> {
   }
 
   _getBody(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.only(top: 16),
+    return Column(
+      children: <Widget>[
+        const SizedBox(height: 16),
+        _getAccuracyWidget(),
+        const SizedBox(height: 16),
+        _getDatePicker(context),
+        const SizedBox(height: 8),
+        getDottedDivider(),
+        const SizedBox(height: 8),
+        Expanded(
+          child: SingleChildScrollView(
+            child: _getMatchList(),
+          ),
+        ),
+      ],
+    );
+  }
+
+  _getMatchList() {
+    return Container(
+      color: AppColors.white1,
       child: Column(
         children: <Widget>[
-          _getAccuracyWidget(),
-          const SizedBox(height: 16),
-          _getDatePicker(context)
+          Container(
+            color: AppColors.black2,
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              child: Text(controller.matchData.value.name ?? "",
+                  style: AppStyles.nunitoBold
+                      .copyWith(fontSize: 16, color: AppColors.white5))),
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: controller.matchData.value.schedule!.length,
+            itemBuilder: (context, index) {
+              var matches = controller.matchData.value.schedule![index].matches;
+              return ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: matches!.length,
+                itemBuilder: (context, matchIndex) {
+                  return ListTile(
+                    tileColor: AppColors.white7,
+                    title: Text(
+                      'Match ${matchIndex + 1}: ${matches[matchIndex].homeTeam} vs ${matches[matchIndex].awayTeam}',
+                      style: AppStyles.nunitoBlack
+                          .copyWith(fontSize: 16, color: AppColors.black2),
+                    ),
+                  );
+                },
+              );
+            },
+          )
         ],
       ),
     );
@@ -52,29 +98,31 @@ class HomeView extends BaseView<HomeController> {
     return BaseContainer(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       backgroundColor: AppColors.black1,
-        bgOpacity: 0.9,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Model Accuracy',
-                style: AppStyles.nunitoBold.copyWith(fontSize: 16, color: AppColors.white5)),
-
-            CircularPercentIndicator(
-              radius: 24.0,
-              lineWidth: 5.0,
-              percent: 0.9,
-              center: Text(
-                '${(0.9 * 100).toStringAsFixed(0)}%',
-                style: AppStyles.nunitoBlack.copyWith(fontSize: 12, color: AppColors.white5),
-              ),
-              progressColor: AppColors.white1,
-              backgroundColor: Colors.transparent,
-              circularStrokeCap: CircularStrokeCap.round,
+      bgOpacity: 0.9,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text('Model Accuracy',
+              style: AppStyles.nunitoBold
+                  .copyWith(fontSize: 16, color: AppColors.white5)),
+          CircularPercentIndicator(
+            radius: 24.0,
+            lineWidth: 5.0,
+            percent: 0.9,
+            center: Text(
+              '${(0.9 * 100).toStringAsFixed(0)}%',
+              style: AppStyles.nunitoBlack
+                  .copyWith(fontSize: 12, color: AppColors.white5),
             ),
-          ],
-        ),
+            progressColor: AppColors.white1,
+            backgroundColor: Colors.transparent,
+            circularStrokeCap: CircularStrokeCap.round,
+          ),
+        ],
+      ),
     );
   }
+
   _getDatePicker(BuildContext context) {
     return AppDatePicker(
       selectedDate: controller.selectedDate.value,

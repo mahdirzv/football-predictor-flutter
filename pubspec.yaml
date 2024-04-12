@@ -26,6 +26,7 @@ dependencies:
   shared_preferences: ^2.2.2
   intl: ^0.19.0
   percent_indicator: ^4.2.3
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +41,7 @@ flutter:
     - firebase/dev/
     - firebase/qa/
     - firebase/prod/
+    - lib/views/home/mock_data.json
 
 fonts:
   - family: Nunito
